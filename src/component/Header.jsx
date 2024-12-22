@@ -1,16 +1,16 @@
 import React from "react";
 import styled from "styled-components";
-
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <Wrapper>
       <BrandName>Traditional Knots</BrandName>
       <NavBar>
-        <NavLink href="#">Home</NavLink>
-        <NavLink href="#">About Us</NavLink>
-        <NavLink href="#">Venues</NavLink>
-        <NavLink href="#">Services</NavLink>
-        <NavLink href="#">Contact Us</NavLink>
+        <NavLink to="/home">Home</NavLink>
+        <NavLink to="/about">About Us</NavLink>
+        <NavLink to="/gallery">Gallery</NavLink>
+        <NavLink to="/services">Services</NavLink>
+        <NavLink to="/contact">Contact Us</NavLink>
       </NavBar>
     </Wrapper>
   );
@@ -39,7 +39,7 @@ const NavBar = styled.nav`
   border: 2px dotted blue;
 `;
 
-const NavLink = styled.a`
+const NavLink = styled(Link)`
   text-decoration: none;
   color: inherit;
 `;
