@@ -28,8 +28,6 @@ function App() {
   );
 }
 
-const Wrapper = styled.div`
-  font-family: "Playfair Display", serif;
-`;
+const Wrapper = styled.div``;
 
 export default App;

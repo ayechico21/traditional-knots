@@ -1,7 +1,16 @@
 import React from "react";
 import styled from "styled-components";
 
-// Styled components
+// Reusable component
+function Parallax({ image, height, children }) {
+  return (
+    <ParallaxContainer height={height}>
+      <ParallaxBackground image={image} />
+      <ParallaxContent>{children}</ParallaxContent>
+    </ParallaxContainer>
+  );
+}
+
 const ParallaxContainer = styled.div`
   position: relative;
   height: ${(props) => props.height || "500px"}; /* Allow dynamic height */
@@ -28,15 +37,4 @@ const ParallaxContent = styled.div`
   color: white;
   text-align: center;
 `;
-
-// Reusable component
-const Parallax = ({ image, height, children }) => {
-  return (
-    <ParallaxContainer height={height}>
-      <ParallaxBackground image={image} />
-      <ParallaxContent>{children}</ParallaxContent>
-    </ParallaxContainer>
-  );
-};
-
 export default Parallax;

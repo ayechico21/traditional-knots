@@ -14,7 +14,7 @@ function Home() {
       <Intro>
         <CursiveHeadings>Planning a Dream Wedding?</CursiveHeadings>
         <p>
-          We take pride in bringing to life the many intricate details that make
+          {/*  We take pride in bringing to life the many intricate details that make
           your event truly exceptional. Rest assured, every element—no matter
           how small—will be thoughtfully considered, allowing you to enjoy your
           celebration as much as your guests do. Whether it’s a
@@ -22,7 +22,8 @@ function Home() {
           wedding anniversary, we immerse ourselves in creating a memorable
           tapestry of moments that will leave a lasting impression on you, your
           family, and your guests. We look forward to getting to know you and
-          helping you plan your special day.
+          helping you plan your special day. */}
+          We are a team of dedicated wedding planners, enthusiasts, and creative visionaries who take great joy in crafting unforgettable moments. The smiles and memories we help create are endless, filled with love and happiness beyond imagination.
         </p>
       </Intro>
       <ContentWrapper>
@@ -44,7 +45,6 @@ function Home() {
 }
 
 const Wrapper = styled.div`
-  border: 2px dotted green;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -70,22 +70,30 @@ const MainImage = styled.img`
 `;
 
 const Intro = styled.section`
-  border: 2px dotted blue;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 8px;
   max-width: 800px;
   text-align: center;
+  font-size: 1.2rem;
+  @media screen and (max-width: 768px) {
+    font-size: 1rem;
+    padding: 0 8px;
+  }
 `;
 
 const CursiveHeadings = styled.p`
   font-family: var(--cursive-font);
   font-size: 3rem;
+  font-weight: 600;
+  color: var(--primary-theme);
 `;
 
 const ContentWrapper = styled.div`
   width: 100%;
-  border: 2px dotted blue;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
 `;
 export default Home;

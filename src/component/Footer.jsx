@@ -4,7 +4,7 @@ import styled from "styled-components";
 function Footer() {
   return (
     <Wrapper>
-      <h2>Traditional Knots</h2>
+      <h3>Traditional Knots</h3>
       <p>NCR | Kanpur | Rishikesh | Mussoorie | Jaipur | Agra</p>
       <p>
         © 2024 <span>Traditional Knots</span> All rights reserved
@@ -14,15 +14,18 @@ function Footer() {
 }
 
 const Wrapper = styled.div`
-  border: 2px dotted red;
   padding: 16px 8px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  text-align: center;
   background-color: black;
   color: ${(props) => props.color || "grey"};
+  margin-top: var(--spacing);
+  @media screen and (max-width: 768px) {
+  }
 `;
 
 export default Footer;
