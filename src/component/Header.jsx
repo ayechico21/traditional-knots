@@ -4,6 +4,11 @@ import { Link } from "react-router-dom";
 function Header() {
   return (
     <Wrapper>
+      <LogoWrapper>
+        <LogoImg
+          src={new URL("/images/logo1.png", import.meta.url).href}
+        ></LogoImg>
+      </LogoWrapper>
       <BrandName>Traditional Knots</BrandName>
       <NavBar>
         <NavLink to="/home">Home</NavLink>
@@ -25,6 +30,24 @@ const Wrapper = styled.div`
   gap: 8px;
   border-bottom: 2px solid var(--primary-theme);
   margin-bottom: var(--spacing);
+  position: relative;
+`;
+
+const LogoWrapper = styled.div`
+  height: 200px;
+  overflow: hidden;
+  position: absolute;
+  left: 0;
+  @media screen and (max-width: 768px) {
+    height: 64px;
+  }
+`;
+const LogoImg = styled.img`
+  width: 100%;
+  height: 100%;
+  object-fit: fill;
+  object-position: center;
+  display: block;
 `;
 
 const BrandName = styled.h1`
@@ -53,7 +76,7 @@ const BrandName = styled.h1`
     &::before {
       content: "";
       position: absolute;
-      left: 20%;
+      left: 50%;
       bottom: 8px;
       width: 150px;
       height: 8px;

@@ -12,9 +12,14 @@ function Parallax({ image, height, children }) {
 }
 
 const ParallaxContainer = styled.div`
-  position: relative;
-  height: ${(props) => props.height || "500px"}; /* Allow dynamic height */
+  position: relative; 
+  min-height: ${(props) => props.height || "600px"}; /* Allow dynamic height */
   overflow: hidden;
+  /**center the content box */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 32px 0px; /**For mobile devices */
 `;
 
 const ParallaxBackground = styled.div`
@@ -34,7 +39,16 @@ const ParallaxContent = styled.div`
   position: relative;
   z-index: 1; /* Content above the background */
   padding: 20px;
-  color: white;
   text-align: center;
+  max-width: 800px;
+  background-color: hsl(
+    355.8857142857143,
+    82.93838862559242%,
+    41.37254901960784%,
+    0.5
+  );
+  background-color: hsl(274, 65%, 71%, 0.5);
+  /* border: 2px solid var(--primary-theme); */
+  box-shadow: inset 4px 0 0 2px var(--primary-theme); /* Inner border */
 `;
 export default Parallax;
