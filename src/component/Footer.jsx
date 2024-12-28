@@ -5,7 +5,7 @@ function Footer() {
   return (
     <Wrapper>
       <h3>Traditional Knots</h3>
-      <p>NCR | Kanpur | Rishikesh | Mussoorie | Jaipur | Agra</p>
+      <p>NCR | Kanpur | Rishikesh | Mussoorie | Jaipur | Udaipur |  Agra</p>
       <p>
         © 2024 <span>Traditional Knots</span> All rights reserved
       </p>

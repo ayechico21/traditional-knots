@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 function Header() {
   return (
     <Wrapper>
@@ -11,11 +11,13 @@ function Header() {
       </LogoWrapper>
       <BrandName>Traditional Knots</BrandName>
       <NavBar>
-        <NavLink to="/home">Home</NavLink>
-        <NavLink to="/about">About Us</NavLink>
-        <NavLink to="/gallery">Gallery</NavLink>
-        <NavLink to="/services">Services</NavLink>
-        <NavLink to="/contact">Contact Us</NavLink>
+        <StyledNavLink to="/" end>
+          Home
+        </StyledNavLink>
+        <StyledNavLink to="/about">About Us</StyledNavLink>
+        <StyledNavLink to="/gallery">Gallery</StyledNavLink>
+        <StyledNavLink to="/services">Services</StyledNavLink>
+        <StyledNavLink to="/contact">Contact Us</StyledNavLink>
       </NavBar>
     </Wrapper>
   );
@@ -98,11 +100,15 @@ const NavBar = styled.nav`
   }
 `;
 
-const NavLink = styled(Link)`
+const StyledNavLink = styled(NavLink)`
   text-decoration: none;
   color: inherit;
   &:hover {
     color: var(--primary-theme);
+  }
+  &.active {
+    color: var(--primary-theme);
+    font-weight: bold;
   }
 `;
 

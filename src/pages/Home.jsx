@@ -36,7 +36,7 @@ function Home() {
             every step of the way.
           </p>
         </Parallax>
-        <Parallax image="/images/perfection.jpg" height="600px">
+        <Parallax image="/images/pic0.jpg" height="600px">
           <SectionHeading>Tailored to Perfection</SectionHeading>
           <SectionCursiveHeading>Wedding Services</SectionCursiveHeading>
           <p>
@@ -111,9 +111,12 @@ const Intro = styled.section`
 
 const CursiveHeadings = styled.p`
   font-family: var(--cursive-font);
-  font-size: 3rem;
+  font-size: 1.5rem;
   font-weight: 600;
   color: var(--primary-theme);
+  @supports (font-family: var(--cursive-font)) {
+    font-size: 3.5rem;
+  }
 `;
 
 const ContentWrapper = styled.div`
