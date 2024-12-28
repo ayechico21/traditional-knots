@@ -56,10 +56,6 @@ const Wrapper = styled.div`
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
-
-  @media screen and (max-width: 768px) {
-    flex-direction: column;
-  }
 `;
 
 const SectionWrapper = styled.div`
