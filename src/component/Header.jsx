@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
 import { Link, NavLink } from "react-router-dom";
+import HamburgurMenu from "./HamburgerMenu";
+
 function Header() {
   return (
     <Wrapper>
@@ -19,6 +21,7 @@ function Header() {
         <StyledNavLink to="/services">Services</StyledNavLink>
         <StyledNavLink to="/contact">Contact Us</StyledNavLink>
       </NavBar>
+      <HamburgurMenu />
     </Wrapper>
   );
 }
@@ -32,7 +35,10 @@ const Wrapper = styled.div`
   gap: 8px;
   border-bottom: 2px solid var(--primary-theme);
   margin-bottom: var(--spacing);
-  position: relative;
+  @media screen and (max-width: 768px) {
+    flex-direction: row;
+    justify-content: space-between;
+  }
 `;
 
 const LogoWrapper = styled.div`
@@ -42,6 +48,7 @@ const LogoWrapper = styled.div`
   left: 0;
   @media screen and (max-width: 768px) {
     height: 64px;
+    position: initial;
   }
 `;
 const LogoImg = styled.img`
@@ -59,6 +66,7 @@ const BrandName = styled.h1`
   color: var(--primary-theme);
   line-height: 1;
   position: relative;
+  text-align: center;
   &::before {
     content: "";
     position: absolute;

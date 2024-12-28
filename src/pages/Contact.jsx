@@ -40,7 +40,7 @@ function Contact() {
               alt="Wedding Image"
             />
           </IconImageWrapper>
-          <Info href="#">heeeeeeelllo@gmail.com</Info>
+          <Info href="#">heeeeeeelllfefefnefeo@gmail.com</Info>
         </InfoSection>
       </InfoWrapper>
     </Wrapper>
@@ -103,21 +103,18 @@ const InfoWrapper = styled.div`
 const InfoSection = styled.div`
   display: flex;
   align-items: center;
+  justify-content: flex-start;
   padding: 0px 8px;
   gap: 16px;
+  width: fit-content;
 `;
 
 const IconImageWrapper = styled.div`
   height: 100px;
-  width: 100px;
-
+  min-width: 100px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
-  @media screen and (max-width: 768px) {
-    height: 100px;
-    width: 100px;
-  }
 `;
 
 const IconImage = styled.img`
@@ -132,5 +129,13 @@ const Info = styled.a`
   font-size: 1.4rem;
   text-decoration: underline;
   color: var(--primary-theme);
+  word-wrap: break-word; /* Ensures long words break onto the next line */
+  overflow-wrap: break-word; /* Ensures word breaks in modern browsers */
+  max-width: 100%; /* Ensures the anchor stays within its container */
+  display: block; /* Ensures the <a> tag behaves like a block element */
+  word-break: break-all;
+  @media screen and (max-width: 768px) {
+    font-size: 1.2rem; /* Slightly reduce font size on mobile if needed */
+  }
 `;
 export default Contact;
