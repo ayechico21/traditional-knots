@@ -6,7 +6,7 @@ function Contact() {
   return (
     <Wrapper>
       <ContentWrapper>
-        <Parallax image="/images/pic4.jpg" height="500px">
+        <Parallax image="/images/contactBg.jpg" height="500px">
           <SectionHeading>Here For you,</SectionHeading>
           <SectionCursiveHeading>
             From First Call to Final Touch
@@ -31,16 +31,20 @@ function Contact() {
               alt="Wedding Image"
             />
           </IconImageWrapper>
-          <Info href="#">+91XXXXXXXXXX</Info>
+          <div>
+            <Info href="tel:+91 75052 81599">+917505281599</Info>
+            <Info href="tel:+91 87652 59889">+918765259889</Info>
+            <Info href="tel:+91 78303 91929">+917830391929</Info>
+          </div>
         </InfoSection>
         <InfoSection>
           <IconImageWrapper>
             <IconImage
-              src={new URL("/images/send-mail.png", import.meta.url).href}
+              src={new URL("/images/instagram.png", import.meta.url).href}
               alt="Wedding Image"
             />
           </IconImageWrapper>
-          <Info href="#">heeeeeeelllfefefnefeo@gmail.com</Info>
+          <Info href="https://www.instagram.com/trad_itionalknots/">@trad_itionalknots</Info>
         </InfoSection>
       </InfoWrapper>
     </Wrapper>
@@ -110,8 +114,8 @@ const InfoSection = styled.div`
 `;
 
 const IconImageWrapper = styled.div`
-  height: 100px;
-  min-width: 100px;
+  height: 70px;
+  min-width: 70px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
@@ -134,6 +138,7 @@ const Info = styled.a`
   max-width: 100%; /* Ensures the anchor stays within its container */
   display: block; /* Ensures the <a> tag behaves like a block element */
   word-break: break-all;
+  font-family: initial;
   @media screen and (max-width: 768px) {
     font-size: 1.2rem; /* Slightly reduce font size on mobile if needed */
   }

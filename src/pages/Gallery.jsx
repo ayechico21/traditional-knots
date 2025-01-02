@@ -3,18 +3,18 @@ import styled from "styled-components";
 
 function Gallery() {
   const imgLinks = [
-    new URL("/images/pic0.jpg", import.meta.url).href,
-    new URL("/images/pic7.jpg", import.meta.url).href,
-    new URL("/images/pic1.jpg", import.meta.url).href,
-    new URL("/images/destination.jpg", import.meta.url).href,
-    new URL("/images/pic3.jpg", import.meta.url).href,
-    new URL("/images/pic5.jpg", import.meta.url).href,
-    new URL("/images/pic4.jpg", import.meta.url).href,
-    new URL("/images/perfection.jpg", import.meta.url).href,
+    new URL("/images/p8.jpg", import.meta.url).href,
+    new URL("/images/p9.jpg", import.meta.url).href,
+    new URL("/images/p10.jpg", import.meta.url).href,
+    new URL("/images/p11.jpg", import.meta.url).href,
+    new URL("/images/p13.jpg", import.meta.url).href,
+    new URL("/images/p14.jpg", import.meta.url).href,
+    new URL("/images/p15.jpg", import.meta.url).href,
+    new URL("/images/p0.jpg", import.meta.url).href,
     new URL("/images/homeMain.jpg", import.meta.url).href,
-    new URL("/images/pic6.jpg", import.meta.url).href,
-    new URL("/images/pic2.jpg", import.meta.url).href,
-    new URL("/images/pic8.jpg", import.meta.url).href,
+    new URL("/images/p3.jpg", import.meta.url).href,
+    new URL("/images/p6.jpg", import.meta.url).href,
+    new URL("/images/perfection.jpg", import.meta.url).href,
   ];
   return (
     <>

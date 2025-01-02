@@ -39,7 +39,7 @@ function Services() {
       <SectionWrapper>
         <SectionImageWrapper>
           <SectionImage
-            src={new URL("/images/pic2.jpg", import.meta.url).href}
+            src={new URL("/images/servicesBg.jpg", import.meta.url).href}
             alt="Wedding Image"
           ></SectionImage>
         </SectionImageWrapper>

@@ -36,7 +36,7 @@ function Home() {
             every step of the way.
           </p>
         </Parallax>
-        <Parallax image="/images/pic0.jpg" height="600px">
+        <Parallax image="/images/p0.jpg" height="600px">
           <SectionHeading>Tailored to Perfection</SectionHeading>
           <SectionCursiveHeading>Wedding Services</SectionCursiveHeading>
           <p>

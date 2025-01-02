@@ -8,7 +8,7 @@ function Header() {
     <Wrapper>
       <LogoWrapper>
         <LogoImg
-          src={new URL("/images/logo1.png", import.meta.url).href}
+          src={new URL("/images/logo.jpg", import.meta.url).href}
         ></LogoImg>
       </LogoWrapper>
       <BrandName>Traditional Knots</BrandName>
@@ -42,10 +42,12 @@ const Wrapper = styled.div`
 `;
 
 const LogoWrapper = styled.div`
-  height: 200px;
+  height: 150px;
   overflow: hidden;
   position: absolute;
-  left: 0;
+  left: 8px;
+  top: 8px;
+  border-radius: 16px;
   @media screen and (max-width: 768px) {
     height: 64px;
     position: initial;
