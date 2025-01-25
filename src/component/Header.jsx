@@ -48,6 +48,7 @@ const LogoWrapper = styled.div`
   left: 8px;
   top: 8px;
   border-radius: 16px;
+  aspect-ratio: 1;
   @media screen and (max-width: 768px) {
     height: 64px;
     position: initial;

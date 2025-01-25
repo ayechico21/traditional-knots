@@ -116,9 +116,11 @@ const InfoSection = styled.div`
 const IconImageWrapper = styled.div`
   height: 70px;
   min-width: 70px;
+  max-width: 100px;
   overflow: hidden;
   position: relative;
   margin: 0 auto;
+  aspect-ratio: 1;
 `;
 
 const IconImage = styled.img`
